@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="platzitime.css">
+    <script src="https://kit.fontawesome.com/d9eacc821b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="header--nav">
+            <ul class="header--list">
+                <li>
+                    <button class="button header--button" id="chronometer-button" title="Chronometer" onclick="executeChronometer()"><i class="fa-solid fa-clock" ></i></button>
+                </li>
+                <li>
+                    <button class="button header--button" id="timer-button" title="Timer" onclick="executeTimer()"><i class="fa-solid fa-hourglass"></i></button>
+                </li>
+                <li>
+                    <button class="button header--button" title="Alarms" onclick="executePomodoro()"><i class="fa-solid fa-bell"></i></button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="chronometer">
+            <h1 class="hero--title">Chronometer</h1>
+            <div class="hero--time">
+                <p id="time"><span id="chronometer-minutes">00</span>:<span id="chronometer-seconds">00</span></p>
+            </div>
+            <div class="hero--buttons">
+                <button onclick="startChronometer()" class="button hero--button" type="button">
+                    Start
+                </button>
+                <button onclick="stopChronometer()" class="button hero--button" type="button">
+                    Stop
+                </button>
+                <button onclick="resetChronometer()" class="button hero--button" type="button">
+                    Reset
+                </button>
+            </div>
+        </section>
+        <section class="hero display-section" id="timer">
+            <h1 class="hero--title">Timer</h1>
+            <div class="hero-inputs">
+                <h2 class="timer-end display-timer-end">Timer Terminado</h2>
+                <input id="input-minutes" type="number" placeholder="12">
+                <span>:</span>
+                <input id="input-seconds" type="number" placeholder="43">
+            </div>
+            <div class="hero--time">
+                <p id="time"><span id="timer-minutes">00</span>:<span id="timer-seconds">00</span></p>
+            </div>
+            <div class="hero--buttons">
+                
+                <button onclick="startTimer()" class="button hero--button" type="button">
+                    Start
+                </button>
+            </div>
+            <div class="content-progres-bar">
+                <div class="progres-bar"></div>
+            </div>
+        </section>
+        <section class="hero display-section" id="pomodoro">
+            <h1 class="hero--title">Pomodoro</h1>
+            <h2 class="alert-pomodoro"></h2>
+            <div class="content-progres-bar">
+                <div class="pomodoro-progres-bar"></div>
+            </div>
+            <div class="hero--time">
+                <p id="time"><span id="pomodoro-minutes">00</span>:<span id="pomodoro-seconds">00</span></p>
+            </div>
+            <div class="hero--buttons">
+                
+                <button onclick="startPomodoro()" class="button hero--button" type="button">
+                    Start
+                </button>
+            </div>
+            
+        </section>
+    </main>
+    <script src="platzitime.js"></script>
+</body>
+</html>
