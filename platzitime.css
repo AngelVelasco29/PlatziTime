@@ -77,10 +77,6 @@ main{
 }
 
 .timer-end{
-    position: absolute;
-    left:0;
-    right: 0;
-    top:-100px;
     font-size: 3rem;
     color: red;
 }

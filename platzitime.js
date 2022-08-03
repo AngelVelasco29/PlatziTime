@@ -76,7 +76,7 @@ function startChronometer() {
             minutes.textContent = formatValue(minutesValue);
         }
         seconds.textContent = formatValue(secondsValue);
-    }, 100)
+    }, 1000)
 }
 
 function stopChronometer() {
@@ -166,7 +166,7 @@ function startTimer() {
             timerEnd.classList.remove("display-timer-end");
             progresBar.setAttribute("style", "width:100%");
         }
-    }, 100)
+    }, 1000)
 
 }
 
@@ -195,5 +195,5 @@ function startPomodoro(i = 0) {
                 i = 0;
             }
         }
-    }, 5)
+    }, 1000)
 }
